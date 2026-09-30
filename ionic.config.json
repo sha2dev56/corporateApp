@@ -1,0 +1,7 @@
+{
+  "name": "corporateAppShaghy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
