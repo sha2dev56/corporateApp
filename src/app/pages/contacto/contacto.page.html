@@ -1,13 +1,27 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>contacto</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="ion-padding">
+  <h2>Contacto</h2>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">contacto</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-item>
+    <ion-input
+      [(ngModel)]="correo"
+      type="email"
+      placeholder="Correo electrónico">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea
+      [(ngModel)]="mensaje"
+      placeholder="Escribe tu mensaje aquí...">
+    </ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" class="ion-margin-top" (click)="enviar()">
+    Enviar
+  </ion-button>
+
+  <!-- Mensaje de éxito opcional -->
+  <ion-text color="success" *ngIf="enviado">
+    <p>¡Mensaje enviado con éxito!</p>
+  </ion-text>
 </ion-content>
